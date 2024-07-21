@@ -1,0 +1,26 @@
+{
+  "name": "plugin-test-1",
+  "id": "1396428374545490101",
+  "api": "1.0.0",
+  "main": "code.js",
+  "capabilities": [
+    "codegen"
+  ],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "dev"
+  ],
+  "ui": "ui.html",
+  "codegenLanguages": [
+    {
+      "label": "Language Label",
+      "value": "language-value"
+    }
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}
