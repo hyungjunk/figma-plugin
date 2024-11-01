@@ -1,0 +1,49 @@
+common:
+  product: dashboard
+  owner: dashboard
+  region: "A"
+  env: "B"
+  purpose: regular
+  version: '1.534.0'
+  ecrRepository: "SAMPLE1"
+  awsRegion: "ap-northeast-1"
+app:
+  name: app
+  resources:
+    limits:
+      cpu: 0.1
+      mem: 240Mi
+    requests:
+      cpu: 0.05
+      mem: 120Mi
+  hpa:
+    replicas:
+      min: 1
+      max: 4
+    threshold:
+      cpu: 80
+  nginx:
+    version: 1.25.2
+    healthcheckPath: "fasdf"
+    resources:
+      limits:
+        cpu: 0.3
+        mem: 128Mi
+      requests:
+        cpu: 0.05
+        mem: 16Mi
+  uwsgi_exporter:
+    resources:
+      limits:
+        cpu: 0.1
+        mem: 32Mi
+      requests:
+        cpu: 0.05
+        mem: 8Mi
+  ingress:
+    host: "MY_SAMPLE_HOST"
+    loadBalancerName: web-dashboard
+    listenPorts:
+      - HTTP: 80
+      - HTTPS: 443
+    sslArn: "SAMPLE1"
