@@ -4,7 +4,7 @@ common:
   region: "A"
   env: "B"
   purpose: regular
-  version: "1.534.0"
+  version: '2.3'
   ecrRepository: "SAMPLE1"
   awsRegion: "ap-northeast-1"
 app:
